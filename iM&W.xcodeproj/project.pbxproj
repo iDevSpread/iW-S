@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5CCD1F1DA5C2880010A72E /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5CCD1E1DA5C2880010A72E /* MMMarkdown.framework */; };
 		BA67B2EA1DA16C290011E1F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2E91DA16C290011E1F0 /* main.m */; };
 		BA67B2ED1DA16C290011E1F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2EC1DA16C290011E1F0 /* AppDelegate.m */; };
 		BA67B2F01DA16C290011E1F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2EF1DA16C290011E1F0 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA5CCD1E1DA5C2880010A72E /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMMarkdown.framework; path = Carthage/Build/iOS/MMMarkdown.framework; sourceTree = "<group>"; };
 		BA67B2E51DA16C290011E1F0 /* iM&W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iM&W.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA67B2E91DA16C290011E1F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA67B2EB1DA16C290011E1F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5CCD1F1DA5C2880010A72E /* MMMarkdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA5CCD1D1DA5C2880010A72E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CCD1E1DA5C2880010A72E /* MMMarkdown.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA67B2DC1DA16C290011E1F0 = {
 			isa = PBXGroup;
 			children = (
 				BA67B2E71DA16C290011E1F0 /* iM&W */,
 				BA67B2E61DA16C290011E1F0 /* Products */,
+				BA5CCD1D1DA5C2880010A72E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +70,6 @@
 		BA67B2E71DA16C290011E1F0 /* iM&W */ = {
 			isa = PBXGroup;
 			children = (
-				BA67B2EB1DA16C290011E1F0 /* AppDelegate.h */,
-				BA67B2EC1DA16C290011E1F0 /* AppDelegate.m */,
 				BA67B2EE1DA16C290011E1F0 /* ViewController.h */,
 				BA67B2EF1DA16C290011E1F0 /* ViewController.m */,
 				BA67B2F11DA16C290011E1F0 /* Main.storyboard */,
@@ -74,6 +84,8 @@
 		BA67B2E81DA16C290011E1F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA67B2EB1DA16C290011E1F0 /* AppDelegate.h */,
+				BA67B2EC1DA16C290011E1F0 /* AppDelegate.m */,
 				BA67B2E91DA16C290011E1F0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -89,6 +101,7 @@
 				BA67B2E11DA16C290011E1F0 /* Sources */,
 				BA67B2E21DA16C290011E1F0 /* Frameworks */,
 				BA67B2E31DA16C290011E1F0 /* Resources */,
+				BA5CCD201DA5C2A50010A72E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -145,6 +158,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA5CCD201DA5C2A50010A72E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MMMarkdown.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA67B2E11DA16C290011E1F0 /* Sources */ = {
@@ -272,6 +302,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W63869G3A7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iM&W/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ireadshares.com.iM-W";
@@ -284,6 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W63869G3A7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iM&W/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ireadshares.com.iM-W";
@@ -310,6 +348,7 @@
 				BA67B2FE1DA16C290011E1F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
