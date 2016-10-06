@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5CCD411DA717110010A72E /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD401DA717110010A72E /* blocks.c */; };
 		BA67B2EA1DA16C290011E1F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2E91DA16C290011E1F0 /* main.m */; };
 		BA67B2ED1DA16C290011E1F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2EC1DA16C290011E1F0 /* AppDelegate.m */; };
 		BA67B2F01DA16C290011E1F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA67B2EF1DA16C290011E1F0 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA5CCD401DA717110010A72E /* blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blocks.c; sourceTree = "<group>"; };
 		BA67B2E51DA16C290011E1F0 /* iM&W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iM&W.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA67B2E91DA16C290011E1F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA67B2EB1DA16C290011E1F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		BA5CCD3E1DA70D690010A72E /* Markdown */ = {
 			isa = PBXGroup;
 			children = (
+				BA5CCD401DA717110010A72E /* blocks.c */,
 			);
 			name = Markdown;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				BA67B2F01DA16C290011E1F0 /* ViewController.m in Sources */,
 				BA67B2ED1DA16C290011E1F0 /* AppDelegate.m in Sources */,
 				BA67B2EA1DA16C290011E1F0 /* main.m in Sources */,
+				BA5CCD411DA717110010A72E /* blocks.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
