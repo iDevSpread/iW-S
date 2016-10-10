@@ -12,3 +12,4 @@ This is created to display my program project on iOS application based on Markdo
 ###  Details
 1. Use UIWebView that uses HTML strings as a source. 
 2. Generate HTML from Markdown strings
+3. Use Git Control
